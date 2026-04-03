@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftBike — Sua Loja de Bicicletas</title>
+    <!-- Link para usar formatações da google -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main2.css">
+</head>
+<body>
+    <header>
+        <a href="inicio.html" class="logo">Soft<span>Byke</span></a>
+        <nav class="menu">
+            <ul>
+                <li><a href="inicio.html">Início</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="sobrenos.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <!-- Para usar emoji: "win + ." -->
+                <li><a href="carrinho.html">🛒 Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero: é a seção que o usuario ve ao entrar no site, embora Hero seja o mais comum, não é necessario ser reconhecido como tal. é a parte para cativar a atenção do usuario. -->
+    <section class="hero">
+        <div class="hero-left">
+            <span class="hero-tag">Sua loja de confiança</span>
+            <h1 class="hero-title">
+                Pedal.<br>
+                <span class="accent">Liberdade.</span>
+                Estilo.
+            </h1>
+            <p class="hero-subtitle">
+                Encontre a bicicleta perfeita para cada aventura. Mountain bikes, Speed, Urbana e muito mais — com os melhores preços e atendimento.
+            </p>
+            <div class="hero-cta">
+                <a href="produtos.html" class="btn-primary">Ver Produtos</a>
+                <a href="sobrenos.html" class="btn-secondary">Sobre Nós →</a>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="hero-bg-shape"></div>
+            <div class="hero-circle c1"></div>
+            <div class="hero-circle c2"></div>
+            <div class="hero-bike-icon">🚲</div>
+            <div class="hero-stat-badge s1">
+                <span class="stat-num">200+</span>
+                <span class="stat-label">Modelos disponíveis</span>
+            </div>
+            <div class="hero-stat-badge s2">
+                <span class="stat-num">5★</span>
+                <span class="stat-label">Avaliação dos clientes</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- TICKER: faz o menu rolar com a pagina. -->
+    <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+            <!-- duplicado para loop contínuo -->
+            <span class="ticker-item">Mountain Bike <span class="ticker-dot"></span></span>
+            <span class="ticker-item">Bike Urbana <span class="ticker-dot"></span></span>
+            <span class="ticker-item">Speed <span class="ticker-dot"></span></span>
+            <span class="ticker-item">Capacetes <span class="ticker-dot"></span></span>
+            <span class="ticker-item">Acessórios <span class="ticker-dot"></span></span>
+            <span class="ticker-item">Manutenção <span class="ticker-dot"></span></span>
+            <span class="ticker-item">Mountain Bike <span class="ticker-dot"></span></span>
+            <span class="ticker-item">Bike Urbana <span class="ticker-dot"></span></span>
+            <span class="ticker-item">Speed <span class="ticker-dot"></span></span>
+            <span class="ticker-item">Capacetes <span class="ticker-dot"></span></span>
+            <span class="ticker-item">Acessórios <span class="ticker-dot"></span></span>
+            <span class="ticker-item">Manutenção <span class="ticker-dot"></span></span>
+        </div>
+    </div>
+
+    <!-- CATEGORIAS -->
+    <section class="section">
+        <p class="section-label">O que oferecemos</p>
+        <h2 class="section-title">Explore nossas<br>categorias</h2>
+
+        <div class="categories-grid">
+            <!-- cat-car: agrupa os elemento em um "botão" grande -->
+            <a href="produtos.html" class="cat-card">
+                <span class="cat-icon">⛰️</span>
+                <h3 class="cat-title">Mountain Bike</h3>
+                <p class="cat-desc">Conquiste trilhas e terrenos irregulares com bikes robustas e de alta performance.</p>
+                <span class="cat-arrow">Ver modelos →</span>
+            </a>
+            <a href="produtos.html" class="cat-card">
+                <span class="cat-icon">🏙️</span>
+                <h3 class="cat-title">Bike Urbana</h3>
+                <p class="cat-desc">Leveza e praticidade para o seu dia a dia na cidade com muito estilo.</p>
+                <span class="cat-arrow">Ver modelos →</span>
+            </a>
+            <a href="produtos.html" class="cat-card">
+                <span class="cat-icon">⚡</span>
+                <h3 class="cat-title">Speed</h3>
+                <p class="cat-desc">Tecnologia e conforto para pedaladas sem esforço.</p>
+                <span class="cat-arrow">Ver modelos →</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER: parte inferior da pagina, onde deve conter informações. -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="inicio.html" class="logo">Soft<span>Bike</span></a>
+                <p>Sua loja de bicicletas e acessórios. Qualidade, variedade e o melhor atendimento para a sua jornada sobre duas rodas.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="inicio.html">Início</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="carrinho.html">Carrinho</a></li>
+                    <li><a href="sobrenos.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Integrantes</h4>
+                <ul>
+                    <li>Gabriel Souza</li>
+                    <li>Pedro Henrique</li>
+                    <li>Caizo Demetrio</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <p class="curso">Análise e Desenvolvimento de Sistemas — Desenvolvimento Web</p>
+                <p style="margin-top: 4px; font-size: 0.72rem; color: #555;">© 2026 SoftBike. Projeto acadêmico.</p>
+            </div>
+            <span class="footer-turma">Turma UN-0226 · Matutino</span>
+        </div>
+    </footer>
+
+</body>
+</html>

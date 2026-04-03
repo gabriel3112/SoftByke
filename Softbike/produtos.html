@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos — SoftBike</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="produtos.css">
+    <style>
+
+    </style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+    <a href="index.html" class="logo">Soft<span>Bike</span></a>
+    <nav>
+        <ul>
+            <li><a href="inicio.html">Início</a></li>
+            <li><a href="produtos.html" class="active">Produtos</a></li>
+            <li><a href="sobrenos.html">Sobre Nós</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="carrinho.html" class="nav-cart">🛒 Carrinho</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ── PAGE HERO ── -->
+<div class="page-hero">
+    <div class="breadcrumb">
+        <a href="inicio.html">Início</a>
+        <span>/</span>
+        <span>Produtos</span>
+    </div>
+    <h1>Nosso<br><em>Catálogo</em></h1>
+    <p>Encontre a bicicleta ideal para o seu estilo — de trilhas radicais a passeios urbanos — ou complete seu equipamento com nossos acessórios.</p>
+</div>
+
+<!-- ── NAV CATEGORIAS ── -->
+<nav class="cat-nav" aria-label="Categorias">
+    <a href="#mountain" class="cat-btn active"><span class="cat-emoji">⛰️</span> Mountain Bike</a>
+    <a href="#speed"    class="cat-btn"><span class="cat-emoji">🚴</span> Speed</a>
+    <a href="#urbana"   class="cat-btn"><span class="cat-emoji">🏙️</span> Urbana</a>
+    <a href="#acessorios" class="cat-btn"><span class="cat-emoji">🛠️</span> Acessórios</a>
+</nav>
+
+<!-- MOUNTAIN BIKE -->
+<section class="cat-section" id="mountain">
+
+    <div class="section-head">
+        <div>
+            <p class="section-label">Trilhas & Aventura</p>
+            <h2 class="section-title">Mountain Bike</h2>
+            <p class="section-desc">Bikes robustas para conquistar qualquer terreno. Suspensão, durabilidade e desempenho.</p>
+        </div>
+        <a href="#mountain" class="section-link">Ver todos →</a>
+    </div>
+
+    <div class="produtos-grid">
+
+        <!-- Destaque -->
+        <a href="#" class="destaque-card">
+            <div class="destaque-visual">
+                🚵
+                <span class="badge badge-orange">Mais Vendida</span>
+            </div>
+            <div class="destaque-info">
+                <span class="destaque-tag">Destaque da categoria</span>
+                <h3 class="destaque-nome">MTB Pro Trail X9</h3>
+                <p class="destaque-desc">Aro 29, quadro de alumínio 6061, suspensão dianteira de 120mm, câmbio Shimano Altus 21v. A escolha certa para quem leva a trilha a sério.</p>
+                <div class="destaque-preco">
+                    <span class="preco-novo" style="font-size:2.2rem; font-family: var(--font-d);">R$ 1.499</span>
+                    <span class="preco-old" style="font-size:0.88rem;">R$ 1.800</span>
+                </div>
+                <a href="carrinho.html" class="btn-destaque">Adicionar ao Carrinho</a>
+            </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="#" class="produto-card">
+            <div class="produto-placeholder">
+                🏔️
+                <span class="badge badge-blue">Novo</span>
+            </div>
+            <div class="produto-body">
+                <p class="produto-cat">Mountain Bike</p>
+                <h3 class="produto-nome">MTB Hardtail 27.5</h3>
+                <div class="produto-specs">
+                    <span class="spec-pill">Aro 27.5</span>
+                    <span class="spec-pill">21 marchas</span>
+                    <span class="spec-pill">Freio a disco</span>
+                </div>
+                <div class="produto-footer">
+                    <div class="preco-wrap">
+                        <span class="preco-old">R$ 1.300</span>
+                        <span class="preco-novo">R$ 1.099</span>
+                    </div>
+                    <button class="btn-add">+ Carrinho</button>
+                </div>
+            </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="#" class="produto-card">
+            <div class="produto-placeholder">
+                ⛰️
+            </div>
+            <div class="produto-body">
+                <p class="produto-cat">Mountain Bike</p>
+                <h3 class="produto-nome">MTB Full Suspension</h3>
+                <div class="produto-specs">
+                    <span class="spec-pill">Aro 29</span>
+                    <span class="spec-pill">Dupla suspensão</span>
+                    <span class="spec-pill">27 velocidades</span>
+                </div>
+                <div class="produto-footer">
+                    <div class="preco-wrap">
+                        <span class="preco-old">R$ 3.800</span>
+                        <span class="preco-novo">R$ 3.199</span>
+                    </div>
+                    <button class="btn-add">+ Carrinho</button>
+                </div>
+            </div>
+        </a>
+
+        <!-- Card 4 -->
+        <a href="#" class="produto-card">
+            <div class="produto-placeholder">
+                🌲
+                <span class="badge badge-green">Oferta</span>
+            </div>
+            <div class="produto-body">
+                <p class="produto-cat">Mountain Bike</p>
+                <h3 class="produto-nome">MTB Trail Kids 24</h3>
+                <div class="produto-specs">
+                    <span class="spec-pill">Aro 24</span>
+                    <span class="spec-pill">Infantil</span>
+                    <span class="spec-pill">7 marchas</span>
+                </div>
+                <div class="produto-footer">
+                    <div class="preco-wrap">
+                        <span class="preco-old">R$ 950</span>
+                        <span class="preco-novo">R$ 749</span>
+                    </div>
+                    <button class="btn-add">+ Carrinho</button>
+                </div>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<!-- SEÇÃO 2 — SPEED -->
+<section class="cat-section" id="speed">
+
+    <div class="section-head">
+        <div>
+            <p class="section-label">Velocidade & Performance</p>
+            <h2 class="section-title">Speed</h2>
+            <p class="section-desc">Aerodinâmica e leveza para quem quer ir mais rápido em cada pedalada.</p>
+        </div>
+        <a href="#speed" class="section-link">Ver todos →</a>
+    </div>
+
+    <div class="produtos-grid">
+
+        <!-- Destaque -->
+        <a href="#" class="destaque-card">
+            <div class="destaque-visual">
+                🚴
+                <span class="badge badge-orange">Top de Linha</span>
+            </div>
+            <div class="destaque-info">
+                <span class="destaque-tag">Destaque da categoria</span>
+                <h3 class="destaque-nome">Speed Carbon Aero S5</h3>
+                <p class="destaque-desc">Quadro de carbono T700, garfo aero integrado, grupo Shimano 105 com 22 velocidades. Para quem leva performance a sério.</p>
+                <div class="destaque-preco">
+                    <span class="preco-novo" style="font-size:2.2rem; font-family: var(--font-d);">R$ 5.799</span>
+                    <span class="preco-old" style="font-size:0.88rem;">R$ 6.500</span>
+                </div>
+                <a href="carrinho.html" class="btn-destaque">Adicionar ao Carrinho</a>
+            </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="#" class="produto-card">
+            <div class="produto-placeholder">
+                💨
+            </div>
+            <div class="produto-body">
+                <p class="produto-cat">Speed</p>
+                <h3 class="produto-nome">Speed Alumínio R3</h3>
+                <div class="produto-specs">
+                    <span class="spec-pill">Aro 700c</span>
+                    <span class="spec-pill">18 marchas</span>
+                    <span class="spec-pill">Pneu 28mm</span>
+                </div>
+                <div class="produto-footer">
+                    <div class="preco-wrap">
+                        <span class="preco-old">R$ 2.400</span>
+                        <span class="preco-novo">R$ 1.999</span>
+                    </div>
+                    <button class="btn-add">+ Carrinho</button>
+                </div>
+            </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="#" class="produto-card">
+            <div class="produto-placeholder">
+                🏁
+                <span class="badge badge-blue">Novo</span>
+            </div>
+            <div class="produto-body">
+                <p class="produto-cat">Speed</p>
+                <h3 class="produto-nome">Speed Triathlon TT</h3>
+                <div class="produto-specs">
+                    <span class="spec-pill">Guidão TT</span>
+                    <span class="spec-pill">22 velocidades</span>
+                    <span class="spec-pill">Carbono</span>
+                </div>
+                <div class="produto-footer">
+                    <div class="preco-wrap">
+                        <span class="preco-old">R$ 7.200</span>
+                        <span class="preco-novo">R$ 6.499</span>
+                    </div>
+                    <button class="btn-add">+ Carrinho</button>
+                </div>
+            </div>
+        </a>
+
+        <!-- Card 4 -->
+        <a href="#" class="produto-card">
+            <div class="produto-placeholder">
+                🎽
+                <span class="badge badge-green">Oferta</span>
+            </div>
+            <div class="produto-body">
+                <p class="produto-cat">Speed</p>
+                <h3 class="produto-nome">Speed Iniciante R1</h3>
+                <div class="produto-specs">
+                    <span class="spec-pill">Aro 700c</span>
+                    <span class="spec-pill">14 marchas</span>
+                    <span class="spec-pill">Alumínio</span>
+                </div>
+                <div class="produto-footer">
+                    <div class="preco-wrap">
+                        <span class="preco-old">R$ 1.600</span>
+                        <span class="preco-novo">R$ 1.299</span>
+                    </div>
+                    <button class="btn-add">+ Carrinho</button>
+                </div>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<!-- SEÇÃO 3 — URBANA -->
+<section class="cat-section" id="urbana">
+
+    <div class="section-head">
+        <div>
+            <p class="section-label">Cidade & Cotidiano</p>
+            <h2 class="section-title">Urbana</h2>
+            <p class="section-desc">Conforto, praticidade e estilo para o seu dia a dia nas ruas da cidade.</p>
+        </div>
+        <a href="#urbana" class="section-link">Ver todos →</a>
+    </div>
+
+    <div class="produtos-grid">
+
+        <!-- Destaque -->
+        <a href="#" class="destaque-card">
+            <div class="destaque-visual">
+                🏙️
+                <span class="badge badge-green">Mais Popular</span>
+            </div>
+            <div class="destaque-info">
+                <span class="destaque-tag">Destaque da categoria</span>
+                <h3 class="destaque-nome">City Comfort Deluxe</h3>
+                <p class="destaque-desc">Guidão alto ergonômico, selim acolchoado, bagageiro traseiro e iluminação LED integrada. A bike perfeita para o cotidiano urbano.</p>
+                <div class="destaque-preco">
+                    <span class="preco-novo" style="font-size:2.2rem; font-family: var(--font-d);">R$ 899</span>
+                    <span class="preco-old" style="font-size:0.88rem;">R$ 1.200</span>
+                </div>
+                <a href="carrinho.html" class="btn-destaque">Adicionar ao Carrinho</a>
+            </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="#" class="produto-card">
+            <div class="produto-placeholder">
+                🛞
+                <span class="badge badge-orange">Promoção</span>
+            </div>
+            <div class="produto-body">
+                <p class="produto-cat">Urbana</p>
+                <h3 class="produto-nome">City Fixie Single</h3>
+                <div class="produto-specs">
+                    <span class="spec-pill">Speed única</span>
+                    <span class="spec-pill">Aro 700c</span>
+                    <span class="spec-pill">Fixie</span>
+                </div>
+                <div class="produto-footer">
+                    <div class="preco-wrap">
+                        <span class="preco-old">R$ 900</span>
+                        <span class="preco-novo">R$ 699</span>
+                    </div>
+                    <button class="btn-add">+ Carrinho</button>
+                </div>
+            </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="#" class="produto-card">
+            <div class="produto-placeholder">
+                ⚡
+                <span class="badge badge-blue">E-Bike</span>
+            </div>
+            <div class="produto-body">
+                <p class="produto-cat">Urbana Elétrica</p>
+                <h3 class="produto-nome">E-City 250W</h3>
+                <div class="produto-specs">
+                    <span class="spec-pill">Motor 250W</span>
+                    <span class="spec-pill">60km autonomia</span>
+                    <span class="spec-pill">7 marchas</span>
+                </div>
+                <div class="produto-footer">
+                    <div class="preco-wrap">
+                        <span class="preco-old">R$ 5.500</span>
+                        <span class="preco-novo">R$ 4.799</span>
+                    </div>
+                    <button class="btn-add">+ Carrinho</button>
+                </div>
+            </div>
+        </a>
+
+        <!-- Card 4 -->
+        <a href="#" class="produto-card">
+            <div class="produto-placeholder">
+                🌆
+            </div>
+            <div class="produto-body">
+                <p class="produto-cat">Urbana</p>
+                <h3 class="produto-nome">City Dobrável Fold</h3>
+                <div class="produto-specs">
+                    <span class="spec-pill">Dobrável</span>
+                    <span class="spec-pill">Aro 20</span>
+                    <span class="spec-pill">6 marchas</span>
+                </div>
+                <div class="produto-footer">
+                    <div class="preco-wrap">
+                        <span class="preco-old">R$ 1.400</span>
+                        <span class="preco-novo">R$ 1.149</span>
+                    </div>
+                    <button class="btn-add">+ Carrinho</button>
+                </div>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<!-- ── BANNER FRETE ── -->
+<div class="frete-banner">
+    <div class="frete-item">
+        <span class="frete-icon">🚚</span>
+        <div>
+            <h4>Frete Grátis</h4>
+            <p>Para compras acima de R$500 em todo o Brasil</p>
+        </div>
+    </div>
+    <div class="frete-item">
+        <span class="frete-icon">🔧</span>
+        <div>
+            <h4>Montagem Inclusa</h4>
+            <p>Todas as bikes chegam pré-montadas e ajustadas</p>
+        </div>
+    </div>
+    <div class="frete-item">
+        <span class="frete-icon">🔄</span>
+        <div>
+            <h4>Troca Fácil</h4>
+            <p>30 dias para trocar sem burocracia</p>
+        </div>
+    </div>
+</div>
+
+<!-- SEÇÃO 4 — ACESSÓRIOS -->
+<section class="cat-section" id="acessorios">
+
+    <div class="section-head">
+        <div>
+            <p class="section-label">Complete seu setup</p>
+            <h2 class="section-title">Acessórios</h2>
+            <p class="section-desc">Tudo o que você precisa para pedalar com segurança, conforto e estilo.</p>
+        </div>
+        <a href="#acessorios" class="section-link">Ver todos →</a>
+    </div>
+
+    <div class="acess-grid">
+
+        <a href="#" class="acess-card">
+            <span class="acess-icon">⛑️</span>
+            <h3 class="acess-nome">Capacete MTB Pro</h3>
+            <p class="acess-desc">Ventilação máxima, proteção certificada CE. Vários tamanhos e cores.</p>
+            <div class="acess-footer">
+                <span class="acess-preco">R$ 139</span>
+                <button class="acess-btn">+</button>
+            </div>
+        </a>
+
+        <a href="#" class="acess-card">
+            <span class="acess-icon">🔦</span>
+            <h3 class="acess-nome">Farol LED 800lm</h3>
+            <p class="acess-desc">Recarregável via USB-C, 3 modos de luz, resistente à água.</p>
+            <div class="acess-footer">
+                <span class="acess-preco">R$ 89</span>
+                <button class="acess-btn">+</button>
+            </div>
+        </a>
+
+        <a href="#" class="acess-card">
+            <span class="acess-icon">🔒</span>
+            <h3 class="acess-nome">Cadeado U-Lock</h3>
+            <p class="acess-desc">Aço reforçado anti-corte, suporte de fixação incluso.</p>
+            <div class="acess-footer">
+                <span class="acess-preco">R$ 74</span>
+                <button class="acess-btn">+</button>
+            </div>
+        </a>
+
+        <a href="#" class="acess-card">
+            <span class="acess-icon">💨</span>
+            <h3 class="acess-nome">Bomba de Ar</h3>
+            <p class="acess-desc">Manômetro integrado, compatível com válvulas Presta e Schrader.</p>
+            <div class="acess-footer">
+                <span class="acess-preco">R$ 59</span>
+                <button class="acess-btn">+</button>
+            </div>
+        </a>
+
+        <a href="#" class="acess-card">
+            <span class="acess-icon">🧤</span>
+            <h3 class="acess-nome">Luvas de Ciclismo</h3>
+            <p class="acess-desc">Gel amortecedor na palma, tecido respirável. P, M, G e GG.</p>
+            <div class="acess-footer">
+                <span class="acess-preco">R$ 49</span>
+                <button class="acess-btn">+</button>
+            </div>
+        </a>
+
+        <a href="#" class="acess-card">
+            <span class="acess-icon">🛡️</span>
+            <h3 class="acess-nome">Joelheira MTB</h3>
+            <p class="acess-desc">Proteção articulada para trilhas. Ajuste perfeito sem restringir movimento.</p>
+            <div class="acess-footer">
+                <span class="acess-preco">R$ 119</span>
+                <button class="acess-btn">+</button>
+            </div>
+        </a>
+
+        <a href="#" class="acess-card">
+            <span class="acess-icon">📱</span>
+            <h3 class="acess-nome">Suporte de Celular</h3>
+            <p class="acess-desc">Compatível com smartphones até 7". Rotação 360°, fixação segura.</p>
+            <div class="acess-footer">
+                <span class="acess-preco">R$ 39</span>
+                <button class="acess-btn">+</button>
+            </div>
+        </a>
+
+        <a href="#" class="acess-card">
+            <span class="acess-icon">🧴</span>
+            <h3 class="acess-nome">Kit Manutenção</h3>
+            <p class="acess-desc">Lubrificante, pano microfibra, chaves Allen e desengordurante.</p>
+            <div class="acess-footer">
+                <span class="acess-preco">R$ 69</span>
+                <button class="acess-btn">+</button>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+    <div class="footer-top">
+        <div class="footer-brand">
+            <a href="index.html" class="logo">Soft<span>Bike</span></a>
+            <p>Sua loja de bicicletas e acessórios. Qualidade, variedade e o melhor atendimento para a sua jornada sobre duas rodas.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="inicio.html">Início</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="sobrenos.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Integrantes</h4>
+            <ul>
+                <li>Gabriel Souza</li>
+                <li>Pedro Henrique</li>
+                <li>Caizo Demetrio</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div>
+            <p>Análise e Desenvolvimento de Sistemas — Desenvolvimento Web</p>
+            <p style="margin-top:4px; font-size:0.7rem; color:#444;">© 2026 SoftBike. Projeto acadêmico.</p>
+        </div>
+        <span class="footer-turma">Turma UN-0226 · Matutino</span>
+    </div>
+</footer>
+
+<!-- ── SCRIPT: highlight nav ao rolar ── -->
+<script>
+    const sections = document.querySelectorAll('.cat-section');
+    const navBtns  = document.querySelectorAll('.cat-btn');
+
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                navBtns.forEach(b => b.classList.remove('active'));
+                const active = document.querySelector(`.cat-btn[href="#${e.target.id}"]`);
+                if (active) active.classList.add('active');
+            }
+        });
+    }, { rootMargin: '-40% 0px -50% 0px' });
+
+    sections.forEach(s => obs.observe(s));
+</script>
+
+</body>
+</html>
