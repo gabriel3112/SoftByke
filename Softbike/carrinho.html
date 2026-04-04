@@ -3,9 +3,372 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho</title>
+    <title>Carrinho — SoftBike</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="carrinho.css">
 </head>
 <body>
-    
+
+<!-- ── HEADER ── -->
+<header>
+    <a href="index.html" class="logo">Soft<span>Bike</span></a>
+    <nav>
+        <ul>
+            <li><a href="inicio.html">Início</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="sobrenos.html">Sobre Nós</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="carrinho.html" class="nav-cart active">🛒 Carrinho <span class="cart-count" id="headerCount">3</span></a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ── MODAL ── -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+        <div class="modal-icon">🎉</div>
+        <h2>Pedido Realizado!</h2>
+        <p>Obrigado pela sua compra! Em breve você receberá um e-mail com os detalhes e o código de rastreamento.</p>
+        <a href="inicio.html" class="btn-shop" onclick="closeModal()">Voltar para a loja</a>
+    </div>
+</div>
+
+<!-- ── MAIN ── -->
+<main>
+
+    <div class="breadcrumb">
+        <a href="inicio.html">Início</a>
+        <span>/</span>
+        <a href="produtos.html">Produtos</a>
+        <span>/</span>
+        <span>Carrinho</span>
+    </div>
+
+    <!-- COLUNA ESQUERDA -->
+    <div class="col-left">
+
+        <h1 class="col-title">Seu <span>Carrinho</span></h1>
+        <p class="col-subtitle" id="itemCountLabel">3 itens selecionados</p>
+
+        <!-- ITENS -->
+        <div id="cartItems">
+
+            <div class="cart-item" data-id="1" data-price="1499" data-name="MTB Pro Trail X9">
+                <div class="item-thumb">🚵</div>
+                <div class="item-info">
+                    <p class="item-cat">Mountain Bike</p>
+                    <h3 class="item-name">MTB Pro Trail X9</h3>
+                    <div class="item-specs">
+                        <span class="item-spec">Aro 29</span>
+                        <span class="item-spec">21 marchas</span>
+                        <span class="item-spec">Shimano Altus</span>
+                    </div>
+                </div>
+                <div class="item-actions">
+                    <div>
+                        <span class="item-price-old">R$ 1.800</span>
+                        <span class="item-price" id="price-1">R$ 1.499</span>
+                    </div>
+                    <div class="qty-control">
+                        <button class="qty-btn" onclick="changeQty(1, -1)">−</button>
+                        <input class="qty-val" id="qty-1" value="1" readonly>
+                        <button class="qty-btn" onclick="changeQty(1, +1)">+</button>
+                    </div>
+                    <button class="btn-remove" onclick="removeItem(1)">✕ Remover</button>
+                </div>
+            </div>
+
+            <div class="cart-item" data-id="2" data-price="1999" data-name="Speed Alumínio R3">
+                <div class="item-thumb">🚴</div>
+                <div class="item-info">
+                    <p class="item-cat">Speed</p>
+                    <h3 class="item-name">Speed Alumínio R3</h3>
+                    <div class="item-specs">
+                        <span class="item-spec">Aro 700c</span>
+                        <span class="item-spec">18 marchas</span>
+                        <span class="item-spec">Pneu 28mm</span>
+                    </div>
+                </div>
+                <div class="item-actions">
+                    <div>
+                        <span class="item-price-old">R$ 2.400</span>
+                        <span class="item-price" id="price-2">R$ 1.999</span>
+                    </div>
+                    <div class="qty-control">
+                        <button class="qty-btn" onclick="changeQty(2, -1)">−</button>
+                        <input class="qty-val" id="qty-2" value="1" readonly>
+                        <button class="qty-btn" onclick="changeQty(2, +1)">+</button>
+                    </div>
+                    <button class="btn-remove" onclick="removeItem(2)">✕ Remover</button>
+                </div>
+            </div>
+
+            <div class="cart-item" data-id="3" data-price="89" data-name="Farol LED 800lm">
+                <div class="item-thumb">🔦</div>
+                <div class="item-info">
+                    <p class="item-cat">Acessório</p>
+                    <h3 class="item-name">Farol LED 800lm</h3>
+                    <div class="item-specs">
+                        <span class="item-spec">USB-C</span>
+                        <span class="item-spec">3 modos</span>
+                        <span class="item-spec">Impermeável</span>
+                    </div>
+                </div>
+                <div class="item-actions">
+                    <div>
+                        <span class="item-price" id="price-3">R$ 89</span>
+                    </div>
+                    <div class="qty-control">
+                        <button class="qty-btn" onclick="changeQty(3, -1)">−</button>
+                        <input class="qty-val" id="qty-3" value="1" readonly>
+                        <button class="qty-btn" onclick="changeQty(3, +1)">+</button>
+                    </div>
+                    <button class="btn-remove" onclick="removeItem(3)">✕ Remover</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ESTADO VAZIO -->
+        <div class="empty-state" id="emptyState">
+            <span class="empty-icon">🛒</span>
+            <h3>Carrinho vazio</h3>
+            <p>Você ainda não adicionou nenhum produto. Que tal explorar nosso catálogo?</p>
+            <a href="produtos.html" class="btn-shop">Ver produtos</a>
+        </div>
+
+        <!-- CUPOM -->
+        <div class="cupom-box" id="cupomBox">
+            <input class="cupom-input" id="cupomInput" type="text" placeholder="Código do cupom">
+            <button class="btn-cupom" onclick="aplicarCupom()">Aplicar</button>
+        </div>
+        <p class="cupom-msg" id="cupomMsg"></p>
+
+        <!-- SUGERIDOS -->
+        <div class="sugeridos" id="sugeridos">
+            <h3 class="sugeridos-title">Você também pode gostar</h3>
+            <div class="sugeridos-grid">
+                <a href="produtos.html" class="sug-card">
+                    <div class="sug-thumb">⛑️</div>
+                    <div class="sug-body">
+                        <h4 class="sug-nome">Capacete MTB Pro</h4>
+                        <div class="sug-footer">
+                            <span class="sug-preco">R$ 139</span>
+                            <button class="sug-btn">+ Add</button>
+                        </div>
+                    </div>
+                </a>
+                <a href="produtos.html" class="sug-card">
+                    <div class="sug-thumb">🔒</div>
+                    <div class="sug-body">
+                        <h4 class="sug-nome">Cadeado U-Lock</h4>
+                        <div class="sug-footer">
+                            <span class="sug-preco">R$ 74</span>
+                            <button class="sug-btn">+ Add</button>
+                        </div>
+                    </div>
+                </a>
+                <a href="produtos.html" class="sug-card">
+                    <div class="sug-thumb">🧤</div>
+                    <div class="sug-body">
+                        <h4 class="sug-nome">Luvas de Ciclismo</h4>
+                        <div class="sug-footer">
+                            <span class="sug-preco">R$ 49</span>
+                            <button class="sug-btn">+ Add</button>
+                        </div>
+                    </div>
+                </a>
+                <a href="produtos.html" class="sug-card">
+                    <div class="sug-thumb">💨</div>
+                    <div class="sug-body">
+                        <h4 class="sug-nome">Bomba de Ar</h4>
+                        <div class="sug-footer">
+                            <span class="sug-preco">R$ 59</span>
+                            <button class="sug-btn">+ Add</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- COLUNA DIREITA — RESUMO -->
+    <div class="col-right">
+        <div class="resumo-card">
+            <div class="resumo-header">
+                <h2>Resumo</h2>
+                <p>Valores atualizados em tempo real</p>
+            </div>
+
+            <div class="resumo-body">
+                <div class="resumo-linha">
+                    <span class="label">Subtotal</span>
+                    <span class="value" id="subtotal">R$ 3.587</span>
+                </div>
+                <div class="resumo-linha">
+                    <span class="label">Desconto aplicado</span>
+                    <span class="value green" id="desconto">— R$ 0</span>
+                </div>
+                <div class="resumo-linha">
+                    <span class="label">Frete</span>
+                    <span class="value green" id="frete">Grátis 🎉</span>
+                </div>
+                <div class="resumo-divider"></div>
+                <div class="resumo-total">
+                    <span class="label">Total</span>
+                    <span class="total-val" id="total">R$ 3.587</span>
+                </div>
+                <p class="resumo-parcelamento" id="parcelamento">ou 12x de R$ 298,91 sem juros</p>
+
+                <button class="btn-finalizar" id="btnFinalizar" onclick="finalizarCompra()">
+                    Finalizar Compra →
+                </button>
+                <a href="produtos.html" class="btn-continuar">← Continuar comprando</a>
+            </div>
+
+            <div class="pagamentos">
+                <span class="pag-label">Aceito:</span>
+                <div class="pag-icons">
+                    <span class="pag-icon">Pix</span>
+                    <span class="pag-icon">Cartão</span>
+                    <span class="pag-icon">Boleto</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+    <div class="footer-bottom">
+        <div>
+            <p>Análise e Desenvolvimento de Sistemas — Desenvolvimento Web</p>
+            <p style="margin-top:4px; font-size:0.7rem; color:#444;">© 2026 SoftBike · Gabriel Souza · Pedro Henrique · Caizo Demetrio</p>
+        </div>
+        <span class="footer-turma">Turma UN-0226 · Matutino</span>
+    </div>
+</footer>
+
+<!-- ── SCRIPT ── -->
+<script>
+    // Estado do carrinho
+    const cart = {
+        1: { price: 1499, qty: 1 },
+        2: { price: 1999, qty: 1 },
+        3: { price: 89,   qty: 1 },
+    };
+
+    let descontoVal = 0;
+    const CUPONS = { 'SOFTBIKE10': 0.10, 'BIKE20': 0.20, 'FRETE': 0 };
+
+    function fmt(n) {
+        return 'R$ ' + n.toLocaleString('pt-BR', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+    }
+
+    function updateResumo() {
+        const ids = Object.keys(cart);
+        const count = ids.length;
+
+        // label de itens
+        document.getElementById('itemCountLabel').textContent =
+            count === 0 ? 'Carrinho vazio' : `${count} ${count === 1 ? 'item selecionado' : 'itens selecionados'}`;
+
+        // badge header
+        document.getElementById('headerCount').textContent = count;
+
+        // subtotal
+        let sub = 0;
+        ids.forEach(id => { sub += cart[id].price * cart[id].qty; });
+
+        const desc = Math.round(sub * descontoVal);
+        const total = sub - desc;
+        const parcela = (total / 12).toFixed(2).replace('.', ',');
+
+        document.getElementById('subtotal').textContent = fmt(sub);
+        document.getElementById('desconto').textContent = desc > 0 ? `— ${fmt(desc)}` : '— R$ 0';
+        document.getElementById('total').textContent = fmt(total);
+        document.getElementById('parcelamento').textContent =
+            total > 0 ? `ou 12x de R$ ${parcela} sem juros` : '';
+
+        // frete grátis acima de R$500
+        document.getElementById('frete').textContent = total >= 500 ? 'Grátis 🎉' : fmt(25);
+
+        // vazio
+        const empty = document.getElementById('emptyState');
+        const cupom = document.getElementById('cupomBox');
+        const btn   = document.getElementById('btnFinalizar');
+        const sug   = document.getElementById('sugeridos');
+
+        if (count === 0) {
+            empty.classList.add('show');
+            cupom.style.display = 'none';
+            btn.disabled = true;
+            sug.style.display = 'none';
+        } else {
+            empty.classList.remove('show');
+            cupom.style.display = 'flex';
+            btn.disabled = false;
+            sug.style.display = 'block';
+        }
+    }
+
+    function changeQty(id, delta) {
+        if (!cart[id]) return;
+        const newQty = cart[id].qty + delta;
+        if (newQty < 1) { removeItem(id); return; }
+        if (newQty > 9) return;
+        cart[id].qty = newQty;
+        document.getElementById(`qty-${id}`).value = newQty;
+        document.getElementById(`price-${id}`).textContent = fmt(cart[id].price * newQty);
+        updateResumo();
+    }
+
+    function removeItem(id) {
+        const el = document.querySelector(`[data-id="${id}"]`);
+        if (!el) return;
+        el.classList.add('removing');
+        setTimeout(() => {
+            el.remove();
+            delete cart[id];
+            updateResumo();
+        }, 350);
+    }
+
+    function aplicarCupom() {
+        const code = document.getElementById('cupomInput').value.trim().toUpperCase();
+        const msg  = document.getElementById('cupomMsg');
+
+        if (CUPONS[code] !== undefined) {
+            descontoVal = CUPONS[code];
+            msg.className = 'cupom-msg ok';
+            msg.textContent = descontoVal > 0
+                ? `✓ Cupom aplicado! ${descontoVal * 100}% de desconto.`
+                : '✓ Cupom de frete grátis aplicado!';
+        } else {
+            descontoVal = 0;
+            msg.className = 'cupom-msg err';
+            msg.textContent = '✕ Cupom inválido ou expirado.';
+        }
+        updateResumo();
+    }
+
+    function finalizarCompra() {
+        document.getElementById('modalOverlay').classList.add('show');
+    }
+
+    function closeModal() {
+        document.getElementById('modalOverlay').classList.remove('show');
+    }
+
+    document.getElementById('modalOverlay').addEventListener('click', function(e) {
+        if (e.target === this) closeModal();
+    });
+
+    // init
+    updateResumo();
+</script>
+
 </body>
 </html>

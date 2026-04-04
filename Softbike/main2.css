@@ -1,5 +1,5 @@
        
-       /* Ajusta margens e bordas */
+/* Ajusta margens e bordas */
        *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
@@ -32,7 +32,7 @@
             overflow-x: hidden;
         }
 
-        /* ── HEADER ── */
+/* ── HEADER ── */
         header {
             position: fixed;
             top: 0;
@@ -45,7 +45,7 @@
             padding: 0 48px;
             height: 72px;
             background: rgba(10,10,10,0.85);
-            /* Efeito vidro, deixa o topo meio transparente */
+/* Efeito vidro, deixa o topo meio transparente */
             backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(255,255,255,0.06);
         }
@@ -115,7 +115,7 @@
             transform: translateY(-1px);
         }
 
-        /* ── HERO ── */
+/* ── HERO ── */
         .hero {
             margin-top: 72px;
             min-height: calc(100vh - 72px);
@@ -306,7 +306,7 @@
             display: block;
         }
 
-        /* ── DIVIDER ── */
+/* ── DIVIDER ── */
         .ticker {
             background: var(--orange);
             padding: 12px 0;
@@ -339,7 +339,7 @@
             opacity: 0.5;
         }
 
-        /* ── CATEGORIAS ── */
+/* ── CATEGORIAS ── */
         .section {
             padding: 100px 64px;
         }
@@ -453,7 +453,7 @@
             transform: translateX(0);
         }
 
-        /* ── FOOTER ── */
+/* ── FOOTER ── */
         footer {
             margin-top: auto;
             background: var(--gray);
@@ -541,7 +541,7 @@
         }
 
 
-        /* ── KEYFRAMES: é a animação, tem um antes e depois para definir a sua transição ── */
+/* ── KEYFRAMES: é a animação, tem um antes e depois para definir a sua transição ── */
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(20px); }
             to   { opacity: 1; transform: translateY(0); }
@@ -562,7 +562,7 @@
             to   { transform: translateX(-50%); }
         }
 
-        /* ── condição para aplicar o css definido ── */
+/* ── condição para aplicar o css definido ── */
         @media (max-width: 900px) {
             header { padding: 0 24px; }
 
