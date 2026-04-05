@@ -34,26 +34,13 @@
     <h1>Nossa<br><em>Galeria</em></h1>
     <p>Uma coleção de momentos, modelos e aventuras sobre duas rodas. Clique em qualquer foto para ampliar.</p>
 </div>
-
-<!-- ── FILTROS ── -->
-<div class="filtros">
-    <span class="filtro-label">Filtrar:</span>
-    <button class="filtro-btn active" onclick="filtrar('todos', this)">Todos</button>
-    <button class="filtro-btn" onclick="filtrar('mountain', this)">Mountain Bike</button>
-    <button class="filtro-btn" onclick="filtrar('speed', this)">Speed</button>
-    <button class="filtro-btn" onclick="filtrar('urbana', this)">Urbana</button>
-    <button class="filtro-btn" onclick="filtrar('trilha', this)">Trilha & Natureza</button>
-    <button class="filtro-btn" onclick="filtrar('acessorio', this)">Acessórios</button>
-</div>
-
 <!-- ── GALERIA ── -->
 <div class="galeria-wrapper">
     <div class="galeria-grid" id="galeriaGrid">
 
-        <!-- 27 fotos usando Unsplash (bike/cycling) com seed fixo para imagens consistentes -->
 
         <div class="foto-item" data-cat="mountain" onclick="openLight(0)">
-            <img src="https://images.unsplash.com/photo-1576435728678-68d0fbf94946?w=600&h=450&fit=crop" alt="Mountain Bike em trilha" loading="lazy">
+            <img src="https://www.reidcycles.com.au/cdn/shop/files/reid-full-suspension-electric-mountain-bike.jpg?v=1685519175&width=3840" alt="Mountain Bike em trilha" loading="lazy">
             <div class="foto-overlay">
                 <span class="foto-tag">Mountain Bike</span>
                 <span class="foto-titulo">Trilha nas Montanhas</span>
@@ -62,7 +49,7 @@
         </div>
 
         <div class="foto-item" data-cat="speed" onclick="openLight(1)">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=450&fit=crop" alt="Ciclista Speed" loading="lazy">
+            <img src="https://i0.wp.com/blog.kakau.co/wp-content/uploads/2022/05/Kakau_Blog_TEMPLATE_20220511.jpg?fit=1920%2C1080&ssl=1" alt="Ciclista Speed" loading="lazy">
             <div class="foto-overlay">
                 <span class="foto-tag">Speed</span>
                 <span class="foto-titulo">Alta Velocidade</span>
@@ -71,7 +58,7 @@
         </div>
 
         <div class="foto-item" data-cat="urbana" onclick="openLight(2)">
-            <img src="https://images.unsplash.com/photo-1471506480208-91b3a4cc78be?w=600&h=450&fit=crop" alt="Bike Urbana" loading="lazy">
+            <img src="https://a-bike.nl/wp-content/uploads/2017/11/a-bike-city-bike-woman-happy-to-cycle-iconic-bridge-amsterdam.jpg" alt="Bike Urbana" loading="lazy">
             <div class="foto-overlay">
                 <span class="foto-tag">Urbana</span>
                 <span class="foto-titulo">Passeio pela Cidade</span>
@@ -80,7 +67,7 @@
         </div>
 
         <div class="foto-item" data-cat="trilha" onclick="openLight(3)">
-            <img src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?w=600&h=450&fit=crop" alt="Trilha Off-Road" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1642485158207-a607b0637b3c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Trilha Off-Road" loading="lazy">
             <div class="foto-overlay">
                 <span class="foto-tag">Trilha & Natureza</span>
                 <span class="foto-titulo">Off-Road Radical</span>
@@ -89,7 +76,7 @@
         </div>
 
         <div class="foto-item" data-cat="mountain" onclick="openLight(4)">
-            <img src="https://images.unsplash.com/photo-1594735627602-5af3f0a2c8de?w=600&h=450&fit=crop" alt="MTB Downhill" loading="lazy">
+            <img src="https://img.redbull.com/images/c_crop,x_777,y_0,h_3711,w_4330/c_fill,w_900,h_750/q_auto:low,f_auto/redbullcom/2018/07/10/4f0eb2e5-f6fa-4ca6-98ff-29a0701516ea/bike-mtb-copa-mundo-2018-myriam-nicole" alt="MTB Downhill" loading="lazy">
             <div class="foto-overlay">
                 <span class="foto-tag">Mountain Bike</span>
                 <span class="foto-titulo">Descida Radical</span>
@@ -98,7 +85,7 @@
         </div>
 
         <div class="foto-item" data-cat="acessorio" onclick="openLight(5)">
-            <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=600&h=450&fit=crop" alt="Capacete e acessórios" loading="lazy">
+            <img src="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/06/Snag_113baf8a.png" alt="Capacete e acessórios" loading="lazy">
             <div class="foto-overlay">
                 <span class="foto-tag">Acessórios</span>
                 <span class="foto-titulo">Equipamento Completo</span>
@@ -116,7 +103,7 @@
         </div>
 
         <div class="foto-item" data-cat="trilha" onclick="openLight(7)">
-            <img src="https://images.unsplash.com/photo-1519583272095-6433daf26b6e?w=600&h=450&fit=crop" alt="Natureza e trilha" loading="lazy">
+            <img src="https://thumbs.dreamstime.com/b/esporte-um-ciclista-em-uma-bicicleta-com-mountain-bike-na-floresta-102748082.jpg" alt="Natureza e trilha" loading="lazy">
             <div class="foto-overlay">
                 <span class="foto-tag">Trilha & Natureza</span>
                 <span class="foto-titulo">Entre as Árvores</span>
@@ -134,16 +121,16 @@
         </div>
 
         <div class="foto-item" data-cat="mountain" onclick="openLight(9)">
-            <img src="https://images.unsplash.com/photo-1544191696-15693b6e2d57?w=600&h=450&fit=crop" alt="MTB no topo" loading="lazy">
+            <img src="https://thumbs.dreamstime.com/b/cyclist-riding-downhill-mountain-bike-canyon-first-person-view-speeding-down-rocky-trail-experiencing-thrill-biking-364287690.jpg" alt="MTB no topo" loading="lazy">
             <div class="foto-overlay">
                 <span class="foto-tag">Mountain Bike</span>
-                <span class="foto-titulo">Vista do Topo</span>
+                <span class="foto-titulo">Vista em 1ª pessoa</span>
             </div>
             <span class="foto-zoom">🔍</span>
         </div>
 
         <div class="foto-item" data-cat="acessorio" onclick="openLight(10)">
-            <img src="https://images.unsplash.com/photo-1591882682370-12a02fe3d2fb?w=600&h=450&fit=crop" alt="Detalhe de bicicleta" loading="lazy">
+            <img src="https://www.mxbikes.com.br/blog/img/imagens_colunas/foto_1874.jpg" alt="Detalhe de bicicleta" loading="lazy">
             <div class="foto-overlay">
                 <span class="foto-tag">Acessórios</span>
                 <span class="foto-titulo">Detalhes do Câmbio</span>
@@ -152,7 +139,7 @@
         </div>
 
         <div class="foto-item" data-cat="speed" onclick="openLight(11)">
-            <img src="https://images.unsplash.com/photo-1530143311094-34d807799e8f?w=600&h=450&fit=crop" alt="Ciclista Speed urbano" loading="lazy">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaaJj_86FonZJConc1vJKAqpkauDFJoW26Nw&s" alt="Ciclista Speed urbano" loading="lazy">
             <div class="foto-overlay">
                 <span class="foto-tag">Speed</span>
                 <span class="foto-titulo">Sprint Urbano</span>
@@ -161,7 +148,7 @@
         </div>
 
         <div class="foto-item" data-cat="trilha" onclick="openLight(12)">
-            <img src="https://images.unsplash.com/photo-1502111217535-4f1f6d40e4b7?w=600&h=450&fit=crop" alt="Trilha de terra" loading="lazy">
+            <img src="https://bikeregistrada.com.br/blog/wp-content/uploads/2025/02/long-shot-man-mountain-biking-equipment_23-21487772631-1024x682.jpg" alt="Trilha de terra" loading="lazy">
             <div class="foto-overlay">
                 <span class="foto-tag">Trilha & Natureza</span>
                 <span class="foto-titulo">Terra Batida</span>
@@ -170,7 +157,7 @@
         </div>
 
         <div class="foto-item" data-cat="urbana" onclick="openLight(13)">
-            <img src="https://images.unsplash.com/photo-1606236943816-6ab2b13f00ca?w=600&h=450&fit=crop" alt="Bike na calçada" loading="lazy">
+            <img src="https://bikeregistrada.com.br/blog/wp-content/uploads/2024/07/bmxaro20-1140x6941-1.jpeg" alt="Bike na calçada" loading="lazy">
             <div class="foto-overlay">
                 <span class="foto-tag">Urbana</span>
                 <span class="foto-titulo">Estilo de Rua</span>
@@ -179,7 +166,7 @@
         </div>
 
         <div class="foto-item" data-cat="mountain" onclick="openLight(14)">
-            <img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=600&h=450&fit=crop" alt="Mountain Bike detalhe" loading="lazy">
+            <img src="https://semexe.com/blog/wp-content/uploads/2021/10/lukas-smith-vVOZRKi6G_s-unsplash.jpg" alt="Mountain Bike detalhe" loading="lazy">
             <div class="foto-overlay">
                 <span class="foto-tag">Mountain Bike</span>
                 <span class="foto-titulo">Suspensão em Ação</span>
@@ -188,7 +175,7 @@
         </div>
 
         <div class="foto-item" data-cat="acessorio" onclick="openLight(15)">
-            <img src="https://images.unsplash.com/photo-1611611158876-41699b77a059?w=600&h=450&fit=crop" alt="Capacete ciclismo" loading="lazy">
+            <img src="https://cdn.awsli.com.br/600x450/1772/1772805/produto/292364053/60822-101_hlmt_align-ii-hlmt-mips-ce-flored-blk-s-m_hero-81ykfcsqzs.jpg" alt="Capacete ciclismo" loading="lazy">
             <div class="foto-overlay">
                 <span class="foto-tag">Acessórios</span>
                 <span class="foto-titulo">Capacete Premium</span>
@@ -206,7 +193,7 @@
         </div>
 
         <div class="foto-item" data-cat="trilha" onclick="openLight(17)">
-            <img src="https://images.unsplash.com/photo-1565975037965-67c3ba66ff8e?w=600&h=450&fit=crop" alt="Bike na natureza" loading="lazy">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/55/58/91/trilha-de-chegada-no.jpg?w=500&h=500&s=1" alt="Bike na natureza" loading="lazy">
             <div class="foto-overlay">
                 <span class="foto-tag">Trilha & Natureza</span>
                 <span class="foto-titulo">Floresta Aberta</span>
@@ -215,7 +202,7 @@
         </div>
 
         <div class="foto-item" data-cat="urbana" onclick="openLight(18)">
-            <img src="https://images.unsplash.com/photo-1558980394-34764db076b4?w=600&h=450&fit=crop" alt="Bicicleta fixie" loading="lazy">
+            <img src="https://ae01.alicdn.com/kf/S527529b4fb6343c1949535a61f891b4cv.jpg" alt="Bicicleta fixie" loading="lazy">
             <div class="foto-overlay">
                 <span class="foto-tag">Urbana</span>
                 <span class="foto-titulo">Fixie no Asfalto</span>
@@ -224,7 +211,7 @@
         </div>
 
         <div class="foto-item" data-cat="mountain" onclick="openLight(19)">
-            <img src="https://images.unsplash.com/photo-1561809855-c8f3a2b65e61?w=600&h=450&fit=crop" alt="MTB salto" loading="lazy">
+            <img src="https://static.vecteezy.com/ti/fotos-gratis/p2/16265665-ciclismo-em-declive-homem-salto-em-altura-em-uma-bicicleta-de-montanha-esporte-radical-foto.jpg" alt="MTB salto" loading="lazy">
             <div class="foto-overlay">
                 <span class="foto-tag">Mountain Bike</span>
                 <span class="foto-titulo">Salto no Trail</span>
@@ -233,7 +220,7 @@
         </div>
 
         <div class="foto-item" data-cat="acessorio" onclick="openLight(20)">
-            <img src="https://images.unsplash.com/photo-1623005329329-8939b0ef2bbe?w=600&h=450&fit=crop" alt="Roda de bicicleta" loading="lazy">
+            <img src="https://images.tcdn.com.br/img/img_prod/1109176/rodas_de_ciclismo_gray_9_5_tubular_usada_835_1_4706b5758550f71a9bfac78406eb98d5.jpeg" alt="Roda de bicicleta" loading="lazy">
             <div class="foto-overlay">
                 <span class="foto-tag">Acessórios</span>
                 <span class="foto-titulo">Rodas de Alta Performance</span>
@@ -242,7 +229,7 @@
         </div>
 
         <div class="foto-item" data-cat="speed" onclick="openLight(21)">
-            <img src="https://images.unsplash.com/photo-1547199506-a81bfc82dce4?w=600&h=450&fit=crop" alt="Bike de estrada detalhe" loading="lazy">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_763106-MLB50954059889_082022-O.webp" alt="Bike de estrada detalhe" loading="lazy">
             <div class="foto-overlay">
                 <span class="foto-tag">Speed</span>
                 <span class="foto-titulo">Quadro de Carbono</span>
@@ -251,7 +238,7 @@
         </div>
 
         <div class="foto-item" data-cat="trilha" onclick="openLight(22)">
-            <img src="https://images.unsplash.com/photo-1508189860359-777d945909ef?w=600&h=450&fit=crop" alt="Ciclista ao entardecer" loading="lazy">
+            <img src="https://img.freepik.com/fotos-premium/silhueta-do-ciclista-andando-de-bicicleta-ao-por-do-sol_39791-90.jpg" alt="Ciclista ao entardecer" loading="lazy">
             <div class="foto-overlay">
                 <span class="foto-tag">Trilha & Natureza</span>
                 <span class="foto-titulo">Pedalada ao Pôr do Sol</span>
@@ -260,7 +247,7 @@
         </div>
 
         <div class="foto-item" data-cat="urbana" onclick="openLight(23)">
-            <img src="https://images.unsplash.com/photo-1510127034890-ba27508e9f1c?w=600&h=450&fit=crop" alt="Bike sharing" loading="lazy">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRswWzPUOeHDLZeU6LfGOybSG6icH9F6WlzmQ&s" alt="Bike sharing" loading="lazy">
             <div class="foto-overlay">
                 <span class="foto-tag">Urbana</span>
                 <span class="foto-titulo">Mobilidade Urbana</span>
@@ -269,7 +256,7 @@
         </div>
 
         <div class="foto-item" data-cat="mountain" onclick="openLight(24)">
-            <img src="https://images.unsplash.com/photo-1490146135762-46a3e18d7b51?w=600&h=450&fit=crop" alt="MTB vista panorâmica" loading="lazy">
+            <img src="https://png.pngtree.com/thumb_back/fh260/background/20250120/pngtree-scenic-mountain-bike-at-sunset-with-stunning-nature-views-for-outdoor-image_16878239.jpg" alt="MTB vista panorâmica" loading="lazy">
             <div class="foto-overlay">
                 <span class="foto-tag">Mountain Bike</span>
                 <span class="foto-titulo">Vista Panorâmica</span>
@@ -278,7 +265,7 @@
         </div>
 
         <div class="foto-item" data-cat="acessorio" onclick="openLight(25)">
-            <img src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=600&h=450&fit=crop" alt="Oficina de bikes" loading="lazy">
+            <img src="https://m.media-amazon.com/images/I/61A9InqGdYL._AC_UF894,1000_QL80_.jpg" alt="Oficina de bikes" loading="lazy">
             <div class="foto-overlay">
                 <span class="foto-tag">Acessórios</span>
                 <span class="foto-titulo">Manutenção & Cuidado</span>
