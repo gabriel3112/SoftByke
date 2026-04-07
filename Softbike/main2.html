@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Permite usar acentos e caracteres especiais -->
     <title>SoftBike — Sua Loja de Bicicletas</title>
     <!-- Link para usar formatações da google -->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
@@ -10,7 +10,8 @@
 </head>
 <body>
     <header>
-        <a href="inicio.html" class="logo">Soft<span>Bike</span></a>
+        <!-- para cli ar na logo e levar para a página inicial -->
+        <a href="inicio.html" class="logo">Soft<span>Byke</span></a>
         <nav class="menu">
             <ul>
                 <li><a href="inicio.html">Início</a></li>
@@ -43,39 +44,22 @@
         </div>
 
         <div class="hero-right">
-            <div class="hero-bg-shape"></div>
-            <div class="hero-circle c1"></div>
-            <div class="hero-circle c2"></div>
-            <div class="hero-bike-icon">🚲</div>
-            <div class="hero-stat-badge s1">
-                <span class="stat-num">200+</span>
-                <span class="stat-label">Modelos disponíveis</span>
-            </div>
-            <div class="hero-stat-badge s2">
-                <span class="stat-num">5★</span>
-                <span class="stat-label">Avaliação dos clientes</span>
-            </div>
+            <div class="hero-background"></div>
+            <div class="hero-1"></div>
+            <div class="hero-2"></div>
         </div>
     </section>
 
     <!-- TICKER: faz o menu rolar com a pagina. -->
-    <div class="ticker" aria-hidden="true">
-        <div class="ticker-track">
-            <!-- duplicado para loop contínuo -->
-            <span class="ticker-item">Mountain Bike <span class="ticker-dot"></span></span>
-            <span class="ticker-item">Bike Urbana <span class="ticker-dot"></span></span>
-            <span class="ticker-item">Speed <span class="ticker-dot"></span></span>
-            <span class="ticker-item">Capacetes <span class="ticker-dot"></span></span>
-            <span class="ticker-item">Acessórios <span class="ticker-dot"></span></span>
-            <span class="ticker-item">Manutenção <span class="ticker-dot"></span></span>
-            <span class="ticker-item">Mountain Bike <span class="ticker-dot"></span></span>
-            <span class="ticker-item">Bike Urbana <span class="ticker-dot"></span></span>
-            <span class="ticker-item">Speed <span class="ticker-dot"></span></span>
-            <span class="ticker-item">Capacetes <span class="ticker-dot"></span></span>
-            <span class="ticker-item">Acessórios <span class="ticker-dot"></span></span>
-            <span class="ticker-item">Manutenção <span class="ticker-dot"></span></span>
-        </div>
-    </div>
+    <div class="ticker">
+  <div class="ticker-track">
+    <span> Mountain Bike </span>
+    <span> Bike Urbana </span>
+    <span> Speed </span>
+    <span> Acessórios </span>
+    <span> Manutenção </span>
+  </div>
+</div>
 
     <!-- CATEGORIAS -->
     <section class="section">

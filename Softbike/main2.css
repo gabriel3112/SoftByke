@@ -319,26 +319,6 @@
             gap: 0;
             animation: ticker 18s linear infinite;
         }
-
-        .ticker-item {
-            display: inline-flex;
-            align-items: center;
-            gap: 24px;
-            padding: 0 32px;
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            letter-spacing: 0.06em;
-            color: var(--black);
-        }
-
-        .ticker-dot {
-            width: 5px;
-            height: 5px;
-            background: var(--black);
-            border-radius: 50%;
-            opacity: 0.5;
-        }
-
 /* ── CATEGORIAS ── */
         .section {
             padding: 100px 64px;
