@@ -256,7 +256,6 @@
             gap: 6px;
             transition: gap .2s;
         }
-        .section-link:hover { gap: 10px; }
 
         /* ── PRODUCT GRID ── */
         .produtos-grid {
@@ -277,19 +276,6 @@
             opacity: 0;
             animation: fadeUp .55s ease forwards;
         }
-
-        /* stagger por nth-child em grupos de 4 */
-        .produto-card:nth-child(1) { animation-delay: .05s; }
-        .produto-card:nth-child(2) { animation-delay: .12s; }
-        .produto-card:nth-child(3) { animation-delay: .19s; }
-        .produto-card:nth-child(4) { animation-delay: .26s; }
-
-        .produto-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(255,92,0,.35);
-            box-shadow: 0 24px 52px rgba(0,0,0,.5);
-        }
-
         .produto-thumb {
             width: 100%;
             aspect-ratio: 4/3;
