@@ -440,48 +440,6 @@ nav a.active {
     flex-shrink: 0;
 }
 
-/* ── DIFERENCIAIS ── */
-.agradecimento {
-    padding: 0 56px 80px;
-}
-
-.agradecimento-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.agradecimentos {
-    background: var(--gray);
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 12px;
-    padding: 24px 20px;
-    text-align: center;
-    transition: transform .2s;
-}
-
-.agradecimentos:hover {
-    transform: translateY(-4px);
-    border-color: rgba(255,92,0,0.3);
-}
-
-.agradecimentos span {
-    font-size: 2rem;
-    display: block;
-    margin-bottom: 12px;
-}
-
-.agradecimentos h4 {
-    font-family: var(--font-d);
-    font-size: 1.2rem;
-    margin-bottom: 6px;
-}
-
-.agradecimentos p {
-    font-size: 0.75rem;
-    color: var(--gray-light);
-}
-
 /* ── FOOTER ── */
 footer {
     background: var(--gray);
