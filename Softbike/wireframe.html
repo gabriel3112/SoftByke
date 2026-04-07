@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframes - SoftBike | Documentação do Projeto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #1a1a1a;
+            font-family: 'DM Sans', sans-serif;
+            padding: 40px;
+        }
+
+        /* Container principal */
+        .wireframes-container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        /* Cabeçalho */
+        .header-doc {
+            background: #f0f0f0;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header-doc h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            color: #333;
+            letter-spacing: 0.02em;
+        }
+
+        .header-doc h1 span {
+            color: #ff5c00;
+        }
+
+        .header-doc p {
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .badge-doc {
+            display: inline-block;
+            background: #ff5c00;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            margin-top: 15px;
+        }
+
+        /* Navegação entre wireframes */
+        .nav-wireframes {
+            background: #e8e8e8;
+            border-radius: 12px;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .nav-wireframes a {
+            background: #ccc;
+            color: #333;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .nav-wireframes a:hover {
+            background: #ff5c00;
+            color: white;
+        }
+
+        /* Cada wireframe */
+        .wireframe-card {
+            background: #f0f0f0;
+            border-radius: 16px;
+            margin-bottom: 40px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .wireframe-header {
+            background: #333;
+            color: white;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .wireframe-header h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            letter-spacing: 0.02em;
+        }
+
+        .wireframe-header .page-id {
+            background: #ff5c00;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+
+        .wireframe-body {
+            padding: 25px;
+        }
+
+        /* ========== ESTILOS DOS BLOCOS (caixas cinzas) ========== */
+
+        /* Estrutura base */
+        .wf-page {
+            background: #e0e0e0;
+            border: 2px solid #aaa;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        /* Header */
+        .wf-header {
+            background: #d0d0d0;
+            border-bottom: 1px solid #aaa;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .wf-logo {
+            background: #bbb;
+            padding: 8px 20px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: #555;
+            border: 1px dashed #888;
+        }
+
+        .wf-menu {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .wf-menu-item {
+            background: #bbb;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.7rem;
+            color: #555;
+            border: 1px dashed #888;
+        }
+
+        /* Hero */
+        .wf-hero {
+            background: #d5d5d5;
+            padding: 30px 20px;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #aaa;
+        }
+
+        .wf-hero-left {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .wf-hero-title {
+            background: #bbb;
+            height: 40px;
+            width: 80%;
+            margin-bottom: 12px;
+            border-radius: 4px;
+            border: 1px dashed #888;
+        }
+
+        .wf-hero-text {
+            background: #bbb;
+            height: 30px;
+            width: 90%;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px dashed #888;
+        }
+
+        .wf-hero-right {
+            flex: 1;
+            background: #c8c8c8;
+            min-height: 150px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: monospace;
+            color: #666;
+            border: 1px dashed #888;
+        }
+
+        /* Seções */
+        .wf-section {
+            padding: 20px;
+            border-bottom: 1px solid #aaa;
+        }
+
+        .wf-section-title-bar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .wf-section-label {
+            background: #c0c0c0;
+            width: 120px;
+            height: 12px;
+            margin: 0 auto 8px;
+            border-radius: 4px;
+        }
+
+        .wf-section-title {
+            background: #b8b8b8;
+            width: 200px;
+            height: 25px;
+            margin: 0 auto;
+            border-radius: 4px;
+        }
+
+        /* Grids */
+        .wf-grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .wf-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .wf-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .wf-card {
+            background: #d2d2d2;
+            border: 1px dashed #888;
+            border-radius: 8px;
+            padding: 12px;
+        }
+
+        .wf-card-img {
+            background: #bbb;
+            height: 80px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: monospace;
+            font-size: 0.7rem;
+            color: #666;
+        }
+
+        .wf-card-line {
+            background: #bbb;
+            height: 12px;
+            width: 80%;
+            margin-bottom: 6px;
+            border-radius: 3px;
+        }
+
+        .wf-card-line.short {
+            width: 50%;
+        }
+
+        /* Formulário */
+        .wf-form {
+            background: #d2d2d2;
+            border: 1px dashed #888;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .wf-form-field {
+            margin-bottom: 15px;
+        }
+
+        .wf-form-label {
+            background: #bbb;
+            height: 12px;
+            width: 100px;
+            margin-bottom: 5px;
+            border-radius: 3px;
+        }
+
+        .wf-form-input {
+            background: #c0c0c0;
+            height: 35px;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px dashed #888;
+        }
+
+        .wf-form-textarea {
+            background: #c0c0c0;
+            height: 80px;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px dashed #888;
+        }
+
+        /* Tabela */
+        .wf-table {
+            background: #d2d2d2;
+            border: 1px dashed #888;
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .wf-table-row {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 5px;
+        }
+
+        .wf-table-cell {
+            background: #bbb;
+            height: 30px;
+            flex: 1;
+            border-radius: 3px;
+        }
+
+        /* Footer */
+        .wf-footer {
+            background: #cecece;
+            padding: 20px;
+            border-top: 1px solid #aaa;
+        }
+
+        .wf-footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .wf-footer-col {
+            background: #bcbcbc;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px dashed #888;
+        }
+
+        .wf-footer-bottom {
+            border-top: 1px dashed #888;
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        /* Legenda */
+        .legenda {
+            margin-top: 15px;
+            padding: 12px;
+            background: #ddd;
+            border-radius: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .legenda-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-family: monospace;
+            font-size: 0.65rem;
+            color: #555;
+        }
+
+        .legenda-box {
+            width: 25px;
+            height: 12px;
+            background: #bbb;
+            border: 1px dashed #888;
+        }
+
+        /* Responsivo */
+        @media (max-width: 800px) {
+            body {
+                padding: 20px;
+            }
+            .wf-grid-4, .wf-grid-3, .wf-grid-2 {
+                grid-template-columns: 1fr;
+            }
+            .wf-footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="wireframes-container">
+
+    <!-- CABEÇALHO -->
+    <div class="header-doc">
+        <h1>Soft<span>Bike</span></h1>
+        <p>Wireframes de todas as páginas do site — Baixa fidelidade (caixas cinzas)</p>
+        <span class="badge-doc">Documentação de Projeto</span>
+    </div>
+
+    <!-- NAVEGAÇÃO -->
+    <div class="nav-wireframes">
+        <a href="#pag-inicio">01. Início</a>
+        <a href="#pag-produtos">02. Produtos</a>
+        <a href="#pag-sobrenos">03. Sobre Nós</a>
+        <a href="#pag-contato">04. Contato</a>
+        <a href="#pag-carrinho">05. Carrinho</a>
+        <a href="#pag-galeria">06. Galeria</a>
+        <a href="#pag-assistencia">07. Assistência</a>
+        <a href="#pag-ancora">08. Âncora (14 seções)</a>
+        <a href="#pag-listas">09. Listas</a>
+        <a href="#pag-formatacoes">10. Formatações</a>
+        <a href="#pag-links">11. Links Externos</a>
+        <a href="#pag-tabela">12. Tabela 5x15</a>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- PÁGINA 01: INÍCIO -->
+    <!-- ============================================ -->
+    <div id="pag-inicio" class="wireframe-card">
+        <div class="wireframe-header">
+            <h2>01. Página Inicial (Home)</h2>
+            <span class="page-id">inicio.html</span>
+        </div>
+        <div class="wireframe-body">
+            <div class="wf-page">
+                <div class="wf-header">
+                    <div class="wf-logo">[ LOGO ] SoftBike</div>
+                    <div class="wf-menu">
+                        <div class="wf-menu-item">Início</div><div class="wf-menu-item">Produtos</div>
+                        <div class="wf-menu-item">Sobre Nós</div><div class="wf-menu-item">Contato</div>
+                        <div class="wf-menu-item">Galeria</div><div class="wf-menu-item">🛒 Carrinho</div>
+                    </div>
+                </div>
+                <div class="wf-hero">
+                    <div class="wf-hero-left">
+                        <div class="wf-hero-title"></div>
+                        <div class="wf-hero-text"></div>
+                        <div style="display: flex; gap: 10px;"><div class="wf-menu-item">Ver Produtos</div><div class="wf-menu-item">Sobre Nós →</div></div>
+                    </div>
+                    <div class="wf-hero-right">[ IMAGEM DESTAQUE ] 🚲</div>
+                </div>
+                <div class="wf-section">
+                    <div class="wf-section-title-bar"><div class="wf-section-label"></div><div class="wf-section-title"></div></div>
+                    <div class="wf-grid-4">
+                        <div class="wf-card"><div class="wf-card-img">🚵</div><div class="wf-card-line"></div><div class="wf-card-line short"></div></div>
+                        <div class="wf-card"><div class="wf-card-img">🚴</div><div class="wf-card-line"></div><div class="wf-card-line short"></div></div>
+                        <div class="wf-card"><div class="wf-card-img">🚲</div><div class="wf-card-line"></div><div class="wf-card-line short"></div></div>
+                        <div class="wf-card"><div class="wf-card-img">⚡</div><div class="wf-card-line"></div><div class="wf-card-line short"></div></div>
+                    </div>
+                </div>
+                <div class="wf-section">
+                    <div class="wf-section-title-bar"><div class="wf-section-label"></div><div class="wf-section-title"></div></div>
+                    <div class="wf-grid-3">
+                        <div class="wf-card"><div class="wf-card-img">🚲 Oferta</div><div class="wf-card-line"></div></div>
+                        <div class="wf-card"><div class="wf-card-img">⛑️ 30% OFF</div><div class="wf-card-line"></div></div>
+                        <div class="wf-card"><div class="wf-card-img">🛠️ Kit</div><div class="wf-card-line"></div></div>
+                    </div>
+                </div>
+                <div class="wf-section">
+                    <div class="wf-section-title-bar"><div class="wf-section-label"></div><div class="wf-section-title"></div></div>
+                    <div class="wf-grid-3">
+                        <div class="wf-card"><div class="wf-card-img">★★★★★</div><div class="wf-card-line"></div></div>
+                        <div class="wf-card"><div class="wf-card-img">★★★★★</div><div class="wf-card-line"></div></div>
+                        <div class="wf-card"><div class="wf-card-img">★★★★☆</div><div class="wf-card-line"></div></div>
+                    </div>
+                </div>
+                <div class="wf-footer">
+                    <div class="wf-footer-grid">
+                        <div class="wf-footer-col"><div class="wf-logo" style="display:inline-block">[ LOGO ]</div><div class="wf-card-line"></div><div class="wf-card-line"></div></div>
+                        <div class="wf-footer-col"><div class="wf-card-line" style="width:60%"></div><div class="wf-card-line"></div><div class="wf-card-line"></div></div>
+                        <div class="wf-footer-col"><div class="wf-card-line" style="width:60%"></div><div class="wf-card-line"></div><div class="wf-card-line"></div></div>
+                    </div>
+                    <div class="wf-footer-bottom"><div class="wf-card-line" style="width:200px"></div><div class="wf-card-line" style="width:120px"></div></div>
+                </div>
+            </div>
+            <div class="legenda"><div class="legenda-item"><div class="legenda-box"></div><span>Bloco/Seção</span></div><div class="legenda-item"><div class="legenda-box" style="background:#c8c8c8"></div><span>Área de imagem</span></div></div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- PÁGINA 02: PRODUTOS -->
+    <!-- ============================================ -->
+    <div id="pag-produtos" class="wireframe-card">
+        <div class="wireframe-header">
+            <h2>02. Página de Produtos</h2>
+            <span class="page-id">produtos.html</span>
+        </div>
+        <div class="wireframe-body">
+            <div class="wf-page">
+                <div class="wf-header"><div class="wf-logo">[ LOGO ]</div><div class="wf-menu"><div class="wf-menu-item">Início</div><div class="wf-menu-item">Produtos</div><div class="wf-menu-item">Sobre</div><div class="wf-menu-item">Contato</div></div></div>
+                <div class="wf-hero" style="padding:20px"><div><div class="wf-hero-title" style="width:150px; height:25px"></div><div class="wf-hero-text" style="height:20px; width:250px"></div></div><div class="wf-hero-right" style="min-height:80px">Breadcrumb: Início / Produtos</div></div>
+                <div class="wf-section"><div class="wf-grid-4"><div class="wf-card"><div class="wf-card-img">🚵</div><div class="wf-card-line"></div><div class="wf-card-line short"></div></div><div class="wf-card"><div class="wf-card-img">🚴</div><div class="wf-card-line"></div><div class="wf-card-line short"></div></div><div class="wf-card"><div class="wf-card-img">🚲</div><div class="wf-card-line"></div><div class="wf-card-line short"></div></div><div class="wf-card"><div class="wf-card-img">⚡</div><div class="wf-card-line"></div><div class="wf-card-line short"></div></div></div></div>
+                <div class="wf-footer"><div class="wf-footer-grid"><div class="wf-footer-col">Rodapé</div><div class="wf-footer-col">Navegação</div><div class="wf-footer-col">Integrantes</div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- PÁGINA 03: SOBRE NÓS -->
+    <!-- ============================================ -->
+    <div id="pag-sobrenos" class="wireframe-card">
+        <div class="wireframe-header">
+            <h2>03. Página Sobre Nós</h2>
+            <span class="page-id">sobrenos.html</span>
+        </div>
+        <div class="wireframe-body">
+            <div class="wf-page">
+                <div class="wf-header"><div class="wf-logo">[ LOGO ]</div><div class="wf-menu"><div class="wf-menu-item">Início</div><div class="wf-menu-item">Produtos</div><div class="wf-menu-item">Sobre Nós</div><div class="wf-menu-item">Contato</div></div></div>
+                <div class="wf-hero" style="padding:20px"><div><div class="wf-hero-title" style="width:200px"></div><div class="wf-hero-text" style="width:300px"></div></div><div class="wf-hero-right" style="min-height:100px">[ Imagem institucional ]</div></div>
+                <div class="wf-section"><div class="wf-grid-3"><div class="wf-card"><div class="wf-card-img">🎯 Missão</div><div class="wf-card-line"></div></div><div class="wf-card"><div class="wf-card-img">👁️ Visão</div><div class="wf-card-line"></div></div><div class="wf-card"><div class="wf-card-img">⭐ Valores</div><div class="wf-card-line"></div></div></div></div>
+                <div class="wf-section"><div class="wf-grid-3"><div class="wf-card"><div class="wf-card-img">GS</div><div class="wf-card-line"></div></div><div class="wf-card"><div class="wf-card-img">PH</div><div class="wf-card-line"></div></div><div class="wf-card"><div class="wf-card-img">CD</div><div class="wf-card-line"></div></div></div></div>
+                <div class="wf-footer"><div class="wf-footer-grid"><div class="wf-footer-col">Rodapé</div><div class="wf-footer-col">Navegação</div><div class="wf-footer-col">Integrantes</div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- PÁGINA 04: CONTATO -->
+    <!-- ============================================ -->
+    <div id="pag-contato" class="wireframe-card">
+        <div class="wireframe-header">
+            <h2>04. Página de Contato</h2>
+            <span class="page-id">contato.html</span>
+        </div>
+        <div class="wireframe-body">
+            <div class="wf-page">
+                <div class="wf-header"><div class="wf-logo">[ LOGO ]</div><div class="wf-menu"><div class="wf-menu-item">Início</div><div class="wf-menu-item">Produtos</div><div class="wf-menu-item">Sobre</div><div class="wf-menu-item">Contato</div></div></div>
+                <div class="wf-hero" style="padding:20px"><div><div class="wf-hero-title" style="width:150px"></div><div class="wf-hero-text" style="width:250px"></div></div><div class="wf-hero-right" style="min-height:80px">📞 Informações de contato</div></div>
+                <div class="wf-section"><div class="wf-grid-2"><div class="wf-form"><div class="wf-form-field"><div class="wf-form-label"></div><div class="wf-form-input"></div></div><div class="wf-form-field"><div class="wf-form-label"></div><div class="wf-form-input"></div></div><div class="wf-form-field"><div class="wf-form-label"></div><div class="wf-form-textarea"></div></div><div class="wf-menu-item" style="display:inline-block">Enviar</div></div><div class="wf-card"><div class="wf-card-img">📍 Endereço</div><div class="wf-card-line"></div><div class="wf-card-line"></div><div class="wf-card-img">📧 Email</div><div class="wf-card-line"></div><div class="wf-card-img">📞 Telefone</div></div></div></div>
+                <div class="wf-footer"><div class="wf-footer-grid"><div class="wf-footer-col">Rodapé</div><div class="wf-footer-col">Navegação</div><div class="wf-footer-col">Integrantes</div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- PÁGINA 05: CARRINHO -->
+    <!-- ============================================ -->
+    <div id="pag-carrinho" class="wireframe-card">
+        <div class="wireframe-header">
+            <h2>05. Página do Carrinho</h2>
+            <span class="page-id">carrinho.html</span>
+        </div>
+        <div class="wireframe-body">
+            <div class="wf-page">
+                <div class="wf-header"><div class="wf-logo">[ LOGO ]</div><div class="wf-menu"><div class="wf-menu-item">Início</div><div class="wf-menu-item">Produtos</div><div class="wf-menu-item">Sobre</div><div class="wf-menu-item">Contato</div></div></div>
+                <div class="wf-section"><div class="wf-grid-2"><div><div class="wf-card"><div class="wf-card-img">Produto 1</div><div class="wf-card-line"></div><div class="wf-card-line short"></div></div><div class="wf-card"><div class="wf-card-img">Produto 2</div><div class="wf-card-line"></div><div class="wf-card-line short"></div></div></div><div class="wf-card"><div class="wf-card-line" style="width:60%"></div><div class="wf-card-line"></div><div class="wf-card-line"></div><div class="wf-menu-item" style="display:inline-block">Finalizar Compra</div></div></div></div>
+                <div class="wf-footer"><div class="wf-footer-grid"><div class="wf-footer-col">Rodapé</div><div class="wf-footer-col">Navegação</div><div class="wf-footer-col">Integrantes</div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- PÁGINA 06: GALERIA -->
+    <!-- ============================================ -->
+    <div id="pag-galeria" class="wireframe-card">
+        <div class="wireframe-header">
+            <h2>06. Página Galeria (25+ fotos)</h2>
+            <span class="page-id">galeria.html</span>
+        </div>
+        <div class="wireframe-body">
+            <div class="wf-page">
+                <div class="wf-header"><div class="wf-logo">[ LOGO ]</div><div class="wf-menu"><div class="wf-menu-item">Início</div><div class="wf-menu-item">Produtos</div><div class="wf-menu-item">Sobre</div><div class="wf-menu-item">Contato</div><div class="wf-menu-item">Galeria</div></div></div>
+                <div class="wf-hero" style="padding:15px"><div><div class="wf-hero-title" style="width:120px; height:25px"></div></div><div class="wf-hero-right" style="min-height:60px">Galeria de Fotos</div></div>
+                <div class="wf-section"><div class="wf-grid-4"><div class="wf-card"><div class="wf-card-img">📷 Foto 1</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 2</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 3</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 4</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 5</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 6</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 7</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 8</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 9</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 10</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 11</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 12</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 13</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 14</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 15</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 16</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 17</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 18</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 19</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 20</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 21</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 22</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 23</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 24</div></div><div class="wf-card"><div class="wf-card-img">📷 Foto 25</div></div></div><div class="legenda" style="margin-top:10px">Grid 3 colunas (representado como 4 para economizar espaço) - 25+ fotos</div></div>
+                <div class="wf-footer"><div class="wf-footer-grid"><div class="wf-footer-col">Rodapé</div><div class="wf-footer-col">Navegação</div><div class="wf-footer-col">Integrantes</div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- PÁGINA 07: ASSISTÊNCIA -->
+    <!-- ============================================ -->
+    <div id="pag-assistencia" class="wireframe-card">
+        <div class="wireframe-header">
+            <h2>07. Página Assistência</h2>
+            <span class="page-id">assistencia.html</span>
+        </div>
+        <div class="wireframe-body">
+            <div class="wf-page">
+                <div class="wf-header"><div class="wf-logo">[ LOGO ]</div><div class="wf-menu"><div class="wf-menu-item">Início</div><div class="wf-menu-item">Produtos</div><div class="wf-menu-item">Sobre</div><div class="wf-menu-item">Contato</div><div class="wf-menu-item">Assistência</div></div></div>
+                <div class="wf-hero" style="padding:20px"><div><div class="wf-hero-title" style="width:180px"></div><div class="wf-hero-text" style="width:280px"></div></div><div class="wf-hero-right" style="min-height:100px">🔧 Assistência Técnica</div></div>
+                <div class="wf-section"><div class="wf-grid-3"><div class="wf-card"><div class="wf-card-img">🛠️ Revisão</div><div class="wf-card-line"></div></div><div class="wf-card"><div class="wf-card-img">🔧 Reparo</div><div class="wf-card-line"></div></div><div class="wf-card"><div class="wf-card-img">⚙️ Peças</div><div class="wf-card-line"></div></div></div></div>
+                <div class="wf-footer"><div class="wf-footer-grid"><div class="wf-footer-col">Rodapé</div><div class="wf-footer-col">Navegação</div><div class="wf-footer-col">Integrantes</div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- PÁGINA 08: ÂNCORA (14 SEÇÕES) -->
+    <!-- ============================================ -->
+    <div id="pag-ancora" class="wireframe-card">
+        <div class="wireframe-header">
+            <h2>08. Página Âncora (14 seções)</h2>
+            <span class="page-id">ancora.html</span>
+        </div>
+        <div class="wireframe-body">
+            <div class="wf-page">
+                <div class="wf-header"><div class="wf-logo">[ LOGO ]</div><div class="wf-menu"><div class="wf-menu-item">Início</div><div class="wf-menu-item">Produtos</div><div class="wf-menu-item">Sobre</div><div class="wf-menu-item">Contato</div></div></div>
+                <div class="wf-section"><div class="wf-menu" style="justify-content:center; flex-wrap:wrap"><div class="wf-menu-item">Link 1</div><div class="wf-menu-item">Link 2</div><div class="wf-menu-item">Link 3</div><div class="wf-menu-item">Link 4</div><div class="wf-menu-item">Link 5</div><div class="wf-menu-item">Link 6</div><div class="wf-menu-item">Link 7</div><div class="wf-menu-item">Link 8</div><div class="wf-menu-item">Link 9</div><div class="wf-menu-item">Link 10</div><div class="wf-menu-item">Link 11</div><div class="wf-menu-item">Link 12</div><div class="wf-menu-item">Link 13</div><div class="wf-menu-item">Link 14</div></div></div>
+                <div class="wf-section"><div class="wf-card"><div class="wf-card-line" style="width:30%"></div><div class="wf-card-line"></div><div class="wf-card-line"></div><div class="wf-menu-item" style="display:inline-block">Voltar ao início ↑</div></div> (x14 seções)</div>
+                <div class="wf-footer"><div class="wf-footer-grid"><div class="wf-footer-col">Rodapé</div><div class="wf-footer-col">Navegação</div><div class="wf-footer-col">Integrantes</div></div></div>
+            </div>
