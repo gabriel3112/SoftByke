@@ -441,17 +441,17 @@ nav a.active {
 }
 
 /* ── DIFERENCIAIS ── */
-.diferenciais {
+.agradecimento {
     padding: 0 56px 80px;
 }
 
-.diferenciais-grid {
+.agradecimento-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
-.diferencial {
+.agradecimentos {
     background: var(--gray);
     border: 1px solid rgba(255,255,255,0.06);
     border-radius: 12px;
@@ -460,24 +460,24 @@ nav a.active {
     transition: transform .2s;
 }
 
-.diferencial:hover {
+.agradecimentos:hover {
     transform: translateY(-4px);
     border-color: rgba(255,92,0,0.3);
 }
 
-.diferencial span {
+.agradecimentos span {
     font-size: 2rem;
     display: block;
     margin-bottom: 12px;
 }
 
-.diferencial h4 {
+.agradecimentos h4 {
     font-family: var(--font-d);
     font-size: 1.2rem;
     margin-bottom: 6px;
 }
 
-.diferencial p {
+.agradecimentos p {
     font-size: 0.75rem;
     color: var(--gray-light);
 }
